@@ -1,86 +1,183 @@
 * {
-      margin: 0;
-      padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-      font-family: "Merriweather", serif;
-      background-color: #f9fafc;
+	font-family: "Merriweather", serif;
+	background-color: #ecf1ff;
 }
 
+/* ------------ NAVBAR -------------- */
 .navbar {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 
-      background-color: #fff;
+	background-color: #fff;
 }
 
 .navbar__brand {
-      width: 25%;
+	width: 25%;
 
-      max-width: 120px;
+	max-width: 120px;
 }
 
 .navbar__logo {
-      width: 100%;
+	width: 100%;
 }
 
-.navbar__nav__items {
-      display: flex;
-      align-items: center;
+.navbar__button__primarys {
+	display: flex;
+	align-items: center;
 }
 
-.nav__item {
-      background-color: #dd2476;
+.button__primary {
+	background-image: linear-gradient(
+		to right,
+		#ff512f 0%,
+		#dd2476 51%,
+		#ff512f 100%
+	);
+	color: #fff;
 
-      color: #fff;
+	border: none;
+	border-radius: 0.55em;
 
-      border: none;
-      border-radius: 0.55em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
 
-      padding-left: 0.8em;
-      padding-right: 0.8em;
-      padding-top: 0.8em;
-      padding-bottom: 0.8em;
+	font-size: 0.9em;
+	font-weight: 600;
 
-      font-size: 0.9em;
-      font-weight: 600;
-
-      transition-property: background-color;
-      transition-duration: 500ms;
-      transition-timing-function: ease-in-out;
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: ease-in-out;
 }
 
-.nav__item:hover {
-      background-color: #ff512f;
-      cursor: pointer;
+.button__primary:hover {
+	background-image: linear-gradient(
+		to right,
+		#ff512f 0%,
+		#dd2476 51%,
+		#ff512f 100%
+	);
+	cursor: pointer;
+}
+/* ------------ NAVBAR -------------- */
+
+/* ------------ MAIN ------------- */
+.container {
+	padding-top: 2em;
+	padding-bottom: 0.8em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
 }
 
+.hero__image__container {
+	padding-top: 3em;
+	padding-bottom: 3em;
 
+	width: 100%;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(../assets/svg/heroShape.svg),
+		url(../assets/svg/herobgpattern.svg);
+	background-repeat: no-repeat;
+}
+
+.hero__image {
+	width: 90%;
+
+	position: relative;
+	top: -0.5em;
+
+	box-shadow: 0 0 0.5rem #afafaf;
+
+	border-radius: 0.25em;
+}
+
+.hero__text {
+	margin: 1em 0;
+
+	font-size: 2em;
+	font-weight: 800;
+	color: #1d3557;
+}
+/* ------------ MAIN ------------- */
+
+/* TABLET VIEW */
 @media screen and (min-width: 768px) {
-      .navbar {
-            padding-left: 1em;
-            padding-right: 1em;
+	.navbar {
+		padding-left: 1em;
+		padding-right: 1em;
 
-            justify-content: space-between;
-      }
+		justify-content: space-between;
+	}
 
-      .navbar__brand {
-            max-width: 150px;
-      }
+	.navbar__brand {
+		max-width: 150px;
+	}
 
-      .nav__item {
-            font-size: 1em;
+	.button__primary {
+		font-size: 1em;
+	}
+
+	.hero__container {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.hero__image__container {
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
+
+      .hero__image {
+            width: 100%;
       }
 }
 
+/* LAPTOP/PC VIEW */
 @media screen and (min-width: 1024px) {
-      .navbar {
-            padding-left: 2em;
-            padding-right: 2em;
+	.navbar {
+		padding-left: 2em;
+		padding-right: 2em;
 
+		justify-content: space-between;
+	}
+	.container {
+		padding-top: 2em;
+		padding-bottom: 0.8em;
+		padding-left: 0.8em;
+		padding-right: 0.8em;
+
+		display: flex;
+		justify-content: center;
+
+		width: 100%;
+	}
+
+	.hero__container {
+            display: flex;
             justify-content: space-between;
+            
+		width: 65%;
+	}
+
+      .hero__image__container {
+            padding-top: 4em;
+            padding-bottom: 4em;
+      }
+
+      .hero__image {
+            position: relative;
+            top: -1em;
       }
 }
