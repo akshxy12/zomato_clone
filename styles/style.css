@@ -27,7 +27,7 @@ body {
 	width: 100%;
 }
 
-.navbar__button__primarys {
+.navbar__nav__items {
 	display: flex;
 	align-items: center;
 }
@@ -66,14 +66,20 @@ body {
 	);
 	cursor: pointer;
 }
-/* ------------ NAVBAR -------------- */
 
 /* ------------ MAIN ------------- */
 .container {
-	padding-top: 2em;
-	padding-bottom: 0.8em;
-	padding-left: 0.8em;
-	padding-right: 0.8em;
+	width: 96%;
+
+	padding-top: 2.5em;
+	padding-left: 2%;
+	padding-right: 2%;
+
+	margin: 0 auto;
+}
+
+.hero__container {
+	margin-top: 0.5em;
 }
 
 .hero__image__container {
@@ -92,7 +98,7 @@ body {
 }
 
 .hero__image {
-	width: 90%;
+	width: 95%;
 
 	position: relative;
 	top: -0.5em;
@@ -105,11 +111,105 @@ body {
 .hero__text {
 	margin: 1em 0;
 
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: 800;
 	color: #1d3557;
 }
-/* ------------ MAIN ------------- */
+
+.explore__menu__container {
+	margin-top: 2.5em;
+
+	width: 100%;
+}
+
+.explore__menu__text {
+	padding-bottom: 1em;
+
+	font-size: 1.8em;
+	font-weight: 800;
+	color: #1d3557;
+
+	text-align: center;
+}
+
+.explore__menu__lists {
+	width: 100%;
+}
+
+.food__card {
+	margin-bottom: 1.5em;
+	padding-bottom: 1em;
+
+	width: 100%;
+
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+
+	box-shadow: 0.1em 0.1em 0.25em #b8b8b8;
+	background-color: #f8f8f8;
+}
+
+.food__card__image__container {
+	width: 100%;
+}
+
+.food__card__image {
+	width: 100%;
+
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
+
+.food__card__description {
+	padding-left: 0.5em;
+}
+
+.plus__span__text {
+	color: #ff0800;
+}
+
+.stay__updated__container {
+      padding: 1em 0;
+}
+
+.stay__updated__text {
+ 	padding-bottom: 1em;
+
+	font-size: 1.8em;
+	font-weight: 800;
+	color: #1d3557;
+
+	text-align: center;
+}
+
+.stay__updated__quote__card {
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 1em;
+
+
+      background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80");
+      background-repeat: no-repeat;
+
+
+      position: relative;
+      color: #ffffff;
+}
+
+
+
+.stay__updated__quote__card__text {
+      padding: 20% 0;
+
+      position: absolute;
+      top: 0;
+
+      z-index: 1;
+}
 
 /* TABLET VIEW */
 @media screen and (min-width: 768px) {
@@ -139,9 +239,32 @@ body {
 		padding-bottom: 3em;
 	}
 
-      .hero__image {
-            width: 100%;
+	.hero__image {
+		width: 100%;
+	}
+
+      .explore__menu__container {
+            margin: 2em 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
       }
+
+	.explore__menu__lists {
+		margin-top: 1em;
+
+            width: 92%;
+
+		display: flex;
+		gap: 1em;
+		justify-content: space-between;
+	}
+
+	#pizza__card {
+		position: relative;
+		top: -1em;
+	}
 }
 
 /* LAPTOP/PC VIEW */
@@ -154,30 +277,71 @@ body {
 	}
 	.container {
 		padding-top: 2em;
-		padding-bottom: 0.8em;
-		padding-left: 0.8em;
-		padding-right: 0.8em;
-
-		display: flex;
-		justify-content: center;
-
-		width: 100%;
 	}
 
 	.hero__container {
-            display: flex;
-            justify-content: space-between;
-            
-		width: 65%;
+            padding: 1em 0;
+
+		display: flex;
+		gap: 1em;
+		justify-content: space-between;
+
+		width: 60%;
+
+		margin: 0 auto;
 	}
 
-      .hero__image__container {
-            padding-top: 4em;
-            padding-bottom: 4em;
-      }
+	.hero__image__container {
+		padding-top: 4em;
+		padding-bottom: 4em;
+	}
 
-      .hero__image {
-            position: relative;
-            top: -1em;
+	.hero__image {
+		position: relative;
+		top: -1em;
+	}
+
+	.hero__description {
+		width: 100%;
+	}
+
+	.hero__text {
+		font-size: 2.8em;
+	}
+
+	.explore__menu__container {
+            margin: 0 auto;
+      
+            width: 70%;
+
+		position: relative;
+	}
+
+	.explore__menu__gradient__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		height: 100%;
+		width: 100%;
+
+		background-image: linear-gradient(
+			to right,
+			#ff512f 0%,
+			#dd2476 51%,
+			#ff512f 100%
+		);
+
+            z-index: -3;
+
+            transform: skewX(-5deg);
+	}
+
+	.explore__menu__text {
+		font-size: 2.8em;
+	}
+
+      .food__card {
+            box-shadow: 0 0 0.8em 0.1em #313131;
       }
 }
