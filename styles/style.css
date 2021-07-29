@@ -266,13 +266,14 @@ footer {
 }
 
 .footer__link {
-      font-size: 1.3em;
-      line-height: 2em;
+      font-size: 1.1em;
+      line-height: 1.5em;
       text-decoration: underline;
 }
 
-.footer__container__copyright {
-	padding: 0.5em 0;
+.footer__copyright{
+      margin: 0 auto;
+      padding: 0.5em 0;
 
 	display: flex;
 	justify-content: center;
