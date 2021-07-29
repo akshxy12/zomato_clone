@@ -332,6 +332,7 @@ footer {
 
 	.stay__updated__container {
 		margin: 0 auto;
+            padding: 1em 0;
 
 		width: 75%;
 	}
